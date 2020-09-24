@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-descriptions
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:config-description="https://openhab.org/schemas/config-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/config-description/v1.0.0 https://openhab.org/schemas/config-description-1.0.0.xsd">
+
+	<config-description uri="thing-type:sunsetwx:accountConfig">
+		<parameter name="emailAddress" type="text" required="true">
+			<label>Email Address</label>
+			<description>Email address used to login to SunsetWx service</description>
+			<context>email</context>
+		</parameter>
+		<parameter name="password" type="text" required="true">
+			<label>Password</label>
+			<description>Password used to login to SunsetWx service</description>
+			<context>password</context>
+		</parameter>
+		<parameter name="backgroundDiscoveryEnabled" type="boolean" required="true">
+			<label>Background Discovery Enabled</label>
+			<description>Enable/disable background discovery of monitors</description>
+			<default>true</default>
+		</parameter>
+	</config-description>
+
+	<config-description uri="thing-type:sunsetwx:config">
+		<parameter name="geoLocation" type="text" required="true">
+			<label>Geo Location</label>
+			<description>Longitude and latitude separated by a comma (e.g. -77.856128,40.812180)</description>
+			<default>-77.8600012,40.7933949</default>
+		</parameter>
+		<parameter name="radius" type="decimal" required="true" min="1.0" max="100.0">
+			<label>Radius</label>
+			<description>Radius around the geoLocation (in kilometers)</description>
+			<default>50.0</default>
+		</parameter>
+		<parameter name="limit" type="integer" required="true" min="1" max="250">
+			<label>Limit</label>
+			<description>Upper limit on number of features in SunsetWx response</description>
+			<default>40</default>
+		</parameter>
+		<parameter name="location" type="text" required="true">
+			<label>Location</label>
+			<description>Determines resolution of features in SunsetWx response</description>
+			<default>northamerica</default>
+			<options>
+				<option value="northamerica">North America</option>
+				<option value="global">Global</option>
+			</options>
+		</parameter>
+		<parameter name="refreshIntervalMinutes" type="integer" required="true" min="10" max="360">
+			<label>Refresh Interval</label>
+			<description>Interval to request quality updates from SunsetWx (in minutes)</description>
+			<default>60</default>
+		</parameter>
+	</config-description>
+
+</config-description:config-descriptions>
