@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2010-2023 Contributors to the openHAB project
+ * Copyright (c) 2010-2024 Contributors to the openHAB project
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information.
@@ -263,7 +263,7 @@ public class BhyveBridgeHandler extends BaseBridgeHandler {
             logger.debug("Bridge: Scheduling LOGIN job in {} seconds", delay);
             loginJob = scheduler.schedule(() -> {
                 logger.debug("Bridge: Logging into bhyve online service");
-                updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.BRIDGE_OFFLINE, "Logging in to service");
+                // updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.BRIDGE_OFFLINE, "Logging in to service");
                 String loginResponse = null;
                 try {
                     Properties headers = new Properties();
@@ -303,6 +303,7 @@ public class BhyveBridgeHandler extends BaseBridgeHandler {
                     ResponseLoginDTO login = gson.fromJson(loginResponse, ResponseLoginDTO.class);
                     sessionToken = login.orbitApiKey;
                     userId = login.userId;
+                    updateStatus(ThingStatus.ONLINE);
                 } catch (JsonSyntaxException e) {
                     logger.debug("Bridge: Got JsonSyntaxException: {}", e.getMessage());
                     updateThingStatus(e.getMessage(), "Error parsing json response");
@@ -310,8 +311,8 @@ public class BhyveBridgeHandler extends BaseBridgeHandler {
                     return;
                 }
                 scheduleRefreshDevicesJob();
-                updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.BRIDGE_OFFLINE,
-                        "Awaiting information about devices");
+                // updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.BRIDGE_OFFLINE,
+                // "Awaiting information about devices");
                 loginJob = null;
             }, delay, TimeUnit.SECONDS);
         }
