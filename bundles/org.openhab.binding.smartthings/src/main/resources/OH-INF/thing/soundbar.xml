@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="smartthings"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+
+	<!-- ═══════════════════════════════════════════════════════════════════
+		Soundbar
+		═══════════════════════════════════════════════════════════════════ -->
+
+	<thing-type id="Samsung_Soundbar">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+
+		<label>Samsung Soundbar</label>
+		<description>A Samsung Soundbar</description>
+
+		<channel-groups>
+			<channel-group typeId="main-group-type-soundbar" id="main"/>
+		</channel-groups>
+
+		<config-description>
+			<parameter name="deviceId" type="text" required="true">
+				<label>Device ID</label>
+				<description>SmartThings device UUID. Find it via GET https://api.smartthings.com/v1/devices.</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<channel-group-type id="main-group-type-soundbar">
+		<label>Soundbar Controls</label>
+		<channels>
+			<channel id="power" typeId="system.power">
+				<properties>
+					<property name="component">main</property>
+					<property name="capability">switch</property>
+					<property name="attribute">switch</property>
+				</properties>
+			</channel>
+			<channel id="volume" typeId="system.volume">
+				<properties>
+					<property name="component">main</property>
+					<property name="capability">audioVolume</property>
+					<property name="attribute">volume</property>
+				</properties>
+			</channel>
+			<channel id="mute" typeId="system.mute">
+				<properties>
+					<property name="component">main</property>
+					<property name="capability">audioMute</property>
+					<property name="attribute">mute</property>
+				</properties>
+			</channel>
+			<channel id="input-source" typeId="inputSource">
+				<properties>
+					<property name="component">main</property>
+					<property name="capability">samsungvd.audioInputSource</property>
+					<property name="attribute">inputSource</property>
+				</properties>
+			</channel>
+			<channel id="playback-status" typeId="playbackStatus">
+				<properties>
+					<property name="component">main</property>
+					<property name="capability">mediaPlayback</property>
+					<property name="attribute">playbackStatus</property>
+				</properties>
+			</channel>
+		</channels>
+	</channel-group-type>
+
+	<channel-type id="inputSource">
+		<item-type>String</item-type>
+		<label>Input Source</label>
+		<description>Active input source (e.g. digital, bluetooth, wifi)</description>
+	</channel-type>
+	<channel-type id="playbackStatus">
+		<item-type>String</item-type>
+		<label>Playback Status</label>
+		<description>Playback status (e.g. playing, paused, stopped)</description>
+	</channel-type>
+
+</thing:thing-descriptions>
