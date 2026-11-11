@@ -1,0 +1,25 @@
+{
+  "accountId": "Pki55GXRYuiJATiP9Lqo",
+  "apiKey": {
+    "id": "cf73fa11d1866fbfe922e8ad",
+    "name": "openHAB Maryland",
+    "scopes": [
+      "read:devices"
+    ],
+    "deviceIds": [
+      "M100003568",
+      "M100027316",
+      "CC:7B:5C:BE:24:A8",
+      "F4:B8:5E:49:3B:B2"
+    ]
+  },
+  "plan": {
+    "id": "default",
+    "apiTier": "free"
+  },
+  "rateLimit": {
+    "perMinute": 4,
+    "perDay": 3000
+  },
+  "recommendedPollSeconds": 15
+}

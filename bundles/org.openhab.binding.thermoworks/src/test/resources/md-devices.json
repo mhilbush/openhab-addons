@@ -1,0 +1,428 @@
+{
+  "generatedAt": "2026-11-04T17:50:29.324Z",
+  "devices": [
+    {
+      "id": "CC:7B:5C:BE:24:A8",
+      "serial": "CC:7B:5C:BE:24:A8",
+      "label": "Maryland RFX Gateway",
+      "model": "rfx gateway",
+      "displayUnits": "F",
+      "type": "rfx",
+      "firmware": "1.2.3-47",
+      "locationId": null,
+      "battery": 85,
+      "batteryState": "discharging",
+      "fan": {
+        "connected": false,
+        "channel": "1",
+        "setTemp": 225,
+        "state": 0
+      },
+      "wifiSignal": -55,
+      "gatewaySignal": null,
+      "lastSeen": "2026-11-04T17:49:40.886Z",
+      "nextExpectedConnection": null,
+      "transmitIntervalSeconds": 60,
+      "channels": [
+        {
+          "id": "1",
+          "number": 1,
+          "label": "Ambient Temp",
+          "type": "Pro-Series",
+          "enabled": true,
+          "value": 84.9000015258789,
+          "units": "F",
+          "status": "NO PROBE",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": true,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": true,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 84.9000015258789,
+          "maximum": 84.9000015258789,
+          "lastTelemetrySaved": "2026-11-04T17:14:01.649Z",
+          "lastSeen": "2026-11-04T17:49:40.886Z"
+        }
+      ]
+    },
+    {
+      "id": "F4:B8:5E:49:3B:B2",
+      "serial": "F4:B8:5E:49:3B:B2",
+      "label": "Maryland Smoke Gateway",
+      "model": "smoke",
+      "displayUnits": "F",
+      "type": "bbq",
+      "firmware": "0.14",
+      "locationId": null,
+      "battery": 66,
+      "batteryState": "discharging",
+      "fan": null,
+      "wifiSignal": 66,
+      "gatewaySignal": null,
+      "lastSeen": "2024-11-26T23:35:11.707Z",
+      "nextExpectedConnection": null,
+      "transmitIntervalSeconds": null,
+      "channels": [
+        {
+          "id": "1",
+          "number": 1,
+          "label": "CH 1",
+          "type": null,
+          "enabled": true,
+          "value": 204.7,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": true,
+            "value": 205,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": true,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 40.4,
+          "maximum": 204.7,
+          "lastTelemetrySaved": "2024-11-07T23:41:10.802Z",
+          "lastSeen": "2024-11-07T23:41:10.899Z"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "label": null,
+          "type": null,
+          "enabled": true,
+          "value": 261.3,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": null,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": null,
+            "alarming": false
+          },
+          "minimum": 62.9,
+          "maximum": 274.4,
+          "lastTelemetrySaved": "2024-11-07T23:41:10.802Z",
+          "lastSeen": "2024-11-07T23:41:10.899Z"
+        }
+      ]
+    },
+    {
+      "id": "M100003568",
+      "serial": "M100003568",
+      "label": "Maryland RFX Black",
+      "model": "rfx meat",
+      "displayUnits": "F",
+      "type": "bbq",
+      "firmware": "1.2.1",
+      "locationId": null,
+      "battery": 100,
+      "batteryState": "discharging",
+      "fan": null,
+      "wifiSignal": null,
+      "gatewaySignal": -37,
+      "lastSeen": "2026-09-24T14:23:34.156Z",
+      "nextExpectedConnection": null,
+      "transmitIntervalSeconds": 60,
+      "channels": [
+        {
+          "id": "0",
+          "number": 0,
+          "label": "Maryland Black ",
+          "type": "computed",
+          "enabled": true,
+          "value": 79.2000045776367,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": true,
+            "value": 160,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 68.0999984741211,
+          "maximum": 79.60000610351562,
+          "lastTelemetrySaved": "2026-09-24T14:23:33.875Z",
+          "lastSeen": "2026-09-24T14:23:34.156Z"
+        },
+        {
+          "id": "1",
+          "number": 1,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 79.3000030517578,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 70.6999969482422,
+          "maximum": 80.8000030517578,
+          "lastTelemetrySaved": "2026-09-24T14:23:33.875Z",
+          "lastSeen": "2026-09-24T14:23:34.156Z"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 79.2000045776367,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 69.39999389648438,
+          "maximum": 80.4000015258789,
+          "lastTelemetrySaved": "2026-09-24T14:23:33.875Z",
+          "lastSeen": "2026-09-24T14:23:34.156Z"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 79.2000045776367,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 69.0999984741211,
+          "maximum": 79.7000045776367,
+          "lastTelemetrySaved": "2026-09-24T14:23:33.875Z",
+          "lastSeen": "2026-09-24T14:23:34.156Z"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 79.3000030517578,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 68.0999984741211,
+          "maximum": 79.7999954223633,
+          "lastTelemetrySaved": "2026-09-24T14:23:33.875Z",
+          "lastSeen": "2026-09-24T14:23:34.156Z"
+        }
+      ]
+    },
+    {
+      "id": "M100027316",
+      "serial": "M100027316",
+      "label": "Maryland RFX Blue",
+      "model": "rfx meat",
+      "displayUnits": "F",
+      "type": "rfx",
+      "firmware": "1.2.1",
+      "locationId": null,
+      "battery": 100,
+      "batteryState": "discharging",
+      "fan": null,
+      "wifiSignal": null,
+      "gatewaySignal": -21,
+      "lastSeen": "2026-10-09T23:12:11.081Z",
+      "nextExpectedConnection": null,
+      "transmitIntervalSeconds": 60,
+      "channels": [
+        {
+          "id": "0",
+          "number": 0,
+          "label": "Maryland Blue",
+          "type": "computed",
+          "enabled": true,
+          "value": 83,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": true,
+            "value": 125,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 35.29999923706055,
+          "maximum": 141.5,
+          "lastTelemetrySaved": "2026-10-09T23:12:10.777Z",
+          "lastSeen": "2026-10-09T23:12:11.081Z"
+        },
+        {
+          "id": "1",
+          "number": 1,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 83,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 35.29999923706055,
+          "maximum": 153.6999969482422,
+          "lastTelemetrySaved": "2026-10-09T23:12:10.777Z",
+          "lastSeen": "2026-10-09T23:12:11.081Z"
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 85.6999969482422,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 35.29999923706055,
+          "maximum": 146.59999084472656,
+          "lastTelemetrySaved": "2026-10-09T23:12:10.777Z",
+          "lastSeen": "2026-10-09T23:12:11.081Z"
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 90,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 35.5,
+          "maximum": 142.29998779296875,
+          "lastTelemetrySaved": "2026-10-09T23:12:10.777Z",
+          "lastSeen": "2026-10-09T23:12:11.081Z"
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "label": null,
+          "type": "rfx meat sensor",
+          "enabled": true,
+          "value": 91.4000015258789,
+          "units": "F",
+          "status": "NORMAL",
+          "probeFailed": false,
+          "alarming": false,
+          "alarmHigh": {
+            "enabled": false,
+            "value": 165,
+            "alarming": false
+          },
+          "alarmLow": {
+            "enabled": false,
+            "value": 32,
+            "alarming": false
+          },
+          "minimum": 35.5,
+          "maximum": 141.5,
+          "lastTelemetrySaved": "2026-10-09T23:12:10.777Z",
+          "lastSeen": "2026-10-09T23:12:11.081Z"
+        }
+      ]
+    }
+  ]
+}

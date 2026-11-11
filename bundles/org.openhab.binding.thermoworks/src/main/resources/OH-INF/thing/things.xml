@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0" bindingId="thermoworks"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Cloud Bridge Thing Type -->
+	<bridge-type id="account">
+		<label>ThermoWorks Cloud Account</label>
+		<description>Establishes connection and manages API polling for ThermoWorks Cloud devices</description>
+		<semantic-equipment-tag>WebService</semantic-equipment-tag>
+		<config-description-ref uri="thing-type:thermoworks:account"/>
+	</bridge-type>
+
+	<!-- Signals (4-Channel Wi-Fi / Bluetooth Thermometer) -->
+	<thing-type id="signals">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+		<label>ThermoWorks Signals</label>
+		<description>4-Channel Wi-Fi &amp; Bluetooth BBQ Alarm Thermometer</description>
+
+		<channels>
+			<channel id="online" typeId="online"/>
+			<channel id="last-updated" typeId="timestamp"/>
+			<channel id="battery-level" typeId="system.battery-level"/>
+			<channel id="battery-state" typeId="battery-state"/>
+			<channel id="rssi" typeId="rssi"/>
+
+			<channel id="probe1-temperature" typeId="temperature"/>
+			<channel id="probe1-label" typeId="label"/>
+			<channel id="probe1-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-low-alarm" typeId="alarm"/>
+
+			<channel id="probe2-temperature" typeId="temperature"/>
+			<channel id="probe2-label" typeId="label"/>
+			<channel id="probe2-alarm" typeId="alarm"/>
+			<channel id="probe2-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe2-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe2-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe2-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe2-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe2-alarm-low-alarm" typeId="alarm"/>
+
+			<channel id="probe3-temperature" typeId="temperature"/>
+			<channel id="probe3-label" typeId="label"/>
+			<channel id="probe3-alarm" typeId="alarm"/>
+			<channel id="probe3-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe3-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe3-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe3-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe3-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe3-alarm-low-alarm" typeId="alarm"/>
+
+			<channel id="probe4-temperature" typeId="temperature"/>
+			<channel id="probe4-label" typeId="label"/>
+			<channel id="probe4-alarm" typeId="alarm"/>
+			<channel id="probe4-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe4-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe4-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe4-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe4-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe4-alarm-low-alarm" typeId="alarm"/>
+		</channels>
+
+		<representation-property>serialNumber</representation-property>
+		<config-description-ref uri="thing-type:thermoworks:device"/>
+	</thing-type>
+
+	<!-- Smoke (2-Channel BBQ Thermometer) -->
+	<thing-type id="smoke">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+		<label>ThermoWorks Smoke</label>
+		<description>2-Channel BBQ Alarm Thermometer</description>
+
+		<channels>
+			<channel id="online" typeId="online"/>
+			<channel id="last-updated" typeId="timestamp"/>
+			<channel id="battery-level" typeId="system.battery-level"/>
+			<channel id="battery-state" typeId="battery-state"/>
+			<channel id="rssi" typeId="rssi"/>
+
+			<channel id="probe1-temperature" typeId="temperature"/>
+			<channel id="probe1-label" typeId="label"/>
+			<channel id="probe1-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-low-alarm" typeId="alarm"/>
+
+			<channel id="probe2-temperature" typeId="temperature"/>
+			<channel id="probe2-label" typeId="label"/>
+			<channel id="probe2-alarm" typeId="alarm"/>
+			<channel id="probe2-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe2-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe2-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe2-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe2-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe2-alarm-low-alarm" typeId="alarm"/>
+		</channels>
+
+		<representation-property>serialNumber</representation-property>
+		<config-description-ref uri="thing-type:thermoworks:device"/>
+	</thing-type>
+
+	<!-- RFX Gateway Hub -->
+	<thing-type id="rfx-gateway">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+		<label>ThermoWorks RFX Gateway</label>
+		<description>Radio Frequency Hub for wireless RFX probes</description>
+
+		<channels>
+			<channel id="online" typeId="online"/>
+			<channel id="last-updated" typeId="timestamp"/>
+			<channel id="battery-level" typeId="system.battery-level"/>
+			<channel id="battery-state" typeId="battery-state"/>
+			<channel id="rssi" typeId="rssi"/>
+
+			<channel id="probe1-temperature" typeId="temperature"/>
+			<channel id="probe1-label" typeId="label"/>
+			<channel id="probe1-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-low-alarm" typeId="alarm"/>
+		</channels>
+
+		<representation-property>serialNumber</representation-property>
+		<config-description-ref uri="thing-type:thermoworks:device"/>
+	</thing-type>
+
+	<!-- RFX MEAT Wireless Probe -->
+	<thing-type id="rfx-meat">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+		<label>ThermoWorks RFX MEAT Probe</label>
+		<description>Wireless High-Temperature Insertion Meat Probe</description>
+
+		<channels>
+			<channel id="online" typeId="online"/>
+			<channel id="last-updated" typeId="timestamp"/>
+			<channel id="battery-level" typeId="system.battery-level"/>
+			<channel id="battery-state" typeId="battery-state"/>
+			<channel id="rssi" typeId="rssi"/>
+
+			<channel id="probe1-temperature" typeId="temperature"/>
+			<channel id="probe1-label" typeId="label"/>
+			<channel id="probe1-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-high-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-high-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-high-alarm" typeId="alarm"/>
+			<channel id="probe1-alarm-low-enabled" typeId="enabled"/>
+			<channel id="probe1-alarm-low-temperature" typeId="temperature"/>
+			<channel id="probe1-alarm-low-alarm" typeId="alarm"/>
+		</channels>
+
+		<representation-property>serialNumber</representation-property>
+		<config-description-ref uri="thing-type:thermoworks:device"/>
+	</thing-type>
+
+	<!-- Generic Fallback Device -->
+	<thing-type id="generic">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="account"/>
+		</supported-bridge-type-refs>
+		<label>ThermoWorks Generic Device</label>
+		<description>Fallback description for unclassified ThermoWorks Cloud devices</description>
+
+		<channels>
+			<channel id="online" typeId="online"/>
+			<channel id="last-updated" typeId="timestamp"/>
+			<channel id="battery-level" typeId="system.battery-level"/>
+			<channel id="battery-state" typeId="battery-state"/>
+			<channel id="rssi" typeId="rssi"/>
+
+			<channel id="probe1-temperature" typeId="temperature"/>
+			<channel id="probe1-label" typeId="label"/>
+			<channel id="probe1-alarm" typeId="alarm"/>
+		</channels>
+
+		<representation-property>serialNumber</representation-property>
+		<config-description-ref uri="thing-type:thermoworks:device"/>
+	</thing-type>
+
+	<!-- Channel Type Definitions -->
+	<channel-type id="battery-state" advanced="true">
+		<item-type>String</item-type>
+		<label>Battery State</label>
+		<description>Current battery state of the device</description>
+		<category>Text</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="rssi" advanced="true">
+		<item-type>Number</item-type>
+		<label>Signal Strength</label>
+		<description>Wi-Fi or gateway signal strength in dBm</description>
+		<category>QualityOfService</category>
+		<state readOnly="true" pattern="%d dBm"/>
+	</channel-type>
+
+	<channel-type id="temperature">
+		<item-type>Number:Temperature</item-type>
+		<label>Temperature</label>
+		<description>Current temperature reading</description>
+		<category>Temperature</category>
+		<state readOnly="true" pattern="%.1f %unit%"/>
+	</channel-type>
+
+	<channel-type id="label">
+		<item-type>String</item-type>
+		<label>Probe Label</label>
+		<description>Custom user label for the probe</description>
+		<category>Text</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="alarm">
+		<item-type>Switch</item-type>
+		<label>Alarm Triggered</label>
+		<description>Indicates whether high or low alarm thresholds have been crossed</description>
+		<category>Alarm</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="online">
+		<item-type>Switch</item-type>
+		<label>Online</label>
+		<description>Indicates whether device is online</description>
+		<category>Switch</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="timestamp">
+		<item-type>DateTime</item-type>
+		<label>Last Updated</label>
+		<description>Timestamp of the last update</description>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<channel-type id="enabled">
+		<item-type>Switch</item-type>
+		<label>Alarm Enabled</label>
+		<description>Indicates whether the alarm is enabled</description>
+		<category>Switch</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+</thing:thing-descriptions>
