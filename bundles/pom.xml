@@ -475,6 +475,7 @@
     <module>org.openhab.binding.tesla</module>
     <module>org.openhab.binding.teslapowerwall</module>
     <module>org.openhab.binding.teslascope</module>
+    <module>org.openhab.binding.thermoworks</module>
     <module>org.openhab.binding.threedprinter</module>
     <module>org.openhab.binding.tibber</module>
     <module>org.openhab.binding.tivo</module>

@@ -1,0 +1,25 @@
+{
+  "accountId": "dh834y7rdh389yd",
+  "apiKey": {
+    "id": "feiufre8uffkjdhfjks",
+    "name": "openHAB",
+    "scopes": [
+      "read:devices"
+    ],
+    "deviceIds": [
+      "M100283823",
+      "M102398398",
+      "CC:87:09:BE:42:F5",
+      "F4:c7:4E:87:3C:D1"
+    ]
+  },
+  "plan": {
+    "id": "default",
+    "apiTier": "free"
+  },
+  "rateLimit": {
+    "perMinute": 4,
+    "perDay": 3000
+  },
+  "recommendedPollSeconds": 60
+}
