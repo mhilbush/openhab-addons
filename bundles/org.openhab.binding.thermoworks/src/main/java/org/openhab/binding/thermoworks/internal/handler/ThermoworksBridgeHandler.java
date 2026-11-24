@@ -25,9 +25,9 @@ import java.util.stream.StreamSupport;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.jetty.client.ContentResponse;
 import org.eclipse.jetty.client.HttpClient;
-import org.eclipse.jetty.client.api.ContentResponse;
-import org.eclipse.jetty.client.api.Request;
+import org.eclipse.jetty.client.Request;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.http.HttpMethod;
 import org.eclipse.jetty.http.HttpStatus;
@@ -130,10 +130,14 @@ public class ThermoworksBridgeHandler extends BaseBridgeHandler {
         try {
             logger.debug("BridgeHandler: Fetching data for all devices...");
             Request request = httpClient.newRequest(API_URL_DEVICES).method(HttpMethod.GET)
-                    .header(HttpHeader.AUTHORIZATION, "Bearer " + apiKey).header(HttpHeader.ACCEPT, "application/json")
+                    .headers(h -> h.put(HttpHeader.AUTHORIZATION, "Bearer " + apiKey))
+                    // .header(HttpHeader.AUTHORIZATION, "Bearer " + apiKey)
+                    .headers(h -> h.put(HttpHeader.ACCEPT, "application/json"))
+                    // .header(HttpHeader.ACCEPT, "application/json")
                     .timeout(HTTP_TIMEOUT_SECONDS, TimeUnit.SECONDS);
             if (includeETag && eTag != null) {
-                request.header("If-None-Match", eTag);
+                request.headers(h -> h.put("If-None-Match", eTag));
+                // request.header("If-None-Match", eTag);
             }
             ContentResponse response = request.send();
             eTag = response.getHeaders().get("ETag");
